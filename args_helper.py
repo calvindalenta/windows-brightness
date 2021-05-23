@@ -29,7 +29,7 @@ class Args():
                                              help='Starts program with the specified options. Detailed options: start -h')
         parser_start.add_argument('start', action="store_true")
         parser_start.add_argument('-v', '--verbose', action='store_true', help='Prints detailed output')
-        parser_start.add_argument('-d', "--default", dest="default_brightness", help="Specify default brightness value if window doesn't exist")
+        parser_start.add_argument('-d', "--default", default=10, dest="default_brightness", help="Specify default brightness value if window doesn't exist")
 
         # Define subparsers for "start"
         subparser_start = parser_start.add_subparsers()

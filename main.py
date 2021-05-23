@@ -74,7 +74,7 @@ if args.test:
     # Just do printing and do nothing else
     gui = ForegroundGUI()
     while True:
-        print("Window: {} | Brightness: {}".format(gui.get_foreground_window(), brightness.get_brightness())
+        print("Window: {} | Brightness: {}".format(gui.get_foreground_window(), brightness.get_brightness()))
         time.sleep(1)
 
 if args.start:
