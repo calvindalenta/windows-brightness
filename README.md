@@ -5,7 +5,7 @@
 
 These scripts will provide you the functionalities for getting the current window on the foreground and getting and setting your computer's brightness
 
-[Click here if you just want to use the binary](google.com)
+[Click here if you just want to use the binary](https://github.com/calvindalenta/windows-brightness#binary-usage)
 
 ## Dependencies
 Before using this script, there are several dependencies that need to be installed. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install them.
@@ -57,7 +57,7 @@ def callback(current_window):
 ```
 
 ## Binary Usage
-
+The binary can be downloaded on the [release](https://github.com/calvindalenta/windows-brightness/releases) page
 ### Specify one window to watch
 ```bash
 program.exe start one "Untitled - Notepad" 40
@@ -67,7 +67,9 @@ program.exe start one "Untitled - Notepad" 40
 ```bash
 program.exe start file yourfile.csv
 ```
-See example.csv for reference
+The csv file specified should have two columns (without header). The first column is the window name and the second one is the brightness value if true.
+
+See [example.csv](https://github.com/calvindalenta/windows-brightness/blob/master/example.csv) for reference
 
 ### Specify default brightness if all the windows specified don't exist
 ```bash
