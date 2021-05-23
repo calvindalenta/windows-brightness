@@ -5,6 +5,8 @@
 
 These scripts will provide you the functionalities for getting the current window on the foreground and getting and setting your computer's brightness
 
+[Click here if you just want to use the binary](google.com)
+
 ## Dependencies
 Before using this script, there are several dependencies that need to be installed. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install them.
 
@@ -13,7 +15,7 @@ pip install WMI
 pip install win32gui
 ```
 
-## Usage
+## Script Usage
 
 ### Brightness
 ```python
@@ -52,4 +54,28 @@ event = ForegroundEvent(callback)
 
 def callback(current_window):
   #Your app logic based on current window provided
+```
+
+## Binary Usage
+
+### Specify one window to watch
+```bash
+program.exe start one "Untitled - Notepad" 40
+```
+
+### Specify multiple windows to watch
+```bash
+program.exe start file yourfile.csv
+```
+See example.csv for reference
+
+### Specify default brightness if all the windows specified don't exist
+```bash
+program.exe start -d 40 one "Untitled - Notepad" 40
+program.exe start -d 40 file yourfile.csv
+```
+
+### If you just want to see what's your current window
+```bash
+program.exe test
 ```
